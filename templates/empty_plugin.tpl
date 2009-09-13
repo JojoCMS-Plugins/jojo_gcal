@@ -1,0 +1,1 @@
+﻿The HTML and Smarty code for your plugin goes here.

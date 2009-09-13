@@ -1,0 +1,1 @@
+Use this file for any installation notes or special instructions. This can be viewed on the Manage Plugins page, and should contain an overview of what the plugin does, and anything the admin user needs to know to get it working.

@@ -1,0 +1,151 @@
+div.calendar_full div.week {
+  width: 600px;
+}
+
+/* basic styles for all days */
+div.calendar_full .mon, div.calendar_full .tue, div.calendar_full .wed, div.calendar_full .thu, div.calendar_full .fri, div.calendar_full .sat, div.calendar_full .sun, div.calendar_full .outside {
+  float: left;
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  overflow: none;
+}
+
+/* perhaps a different style for the weekend? */
+div.calendar_full .sat, div.calendar_full .sun {
+  background: #f9f9f9;
+}
+
+/* 'outside' indecates a day from the previous or next month - you might like to change styles for these days */
+div.calendar_full .outside {
+  background: #f0f0f0;
+}
+
+div.calendar_full a.summary {
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+
+div.calendar_full .mon:hover, div.calendar_full .tue:hover, div.calendar_full .wed:hover, div.calendar_full .thu:hover, div.calendar_full .fri:hover, div.calendar_full .sat:hover, div.calendar_full .sun:hover, div.calendar_full .outside:hover {
+  background: #f5f5f5;
+}
+
+div.calendar_full .mon h3, div.calendar_full .tue h3, div.calendar_full .wed h3, div.calendar_full .thu h3, div.calendar_full .fri h3, div.calendar_full .sat h3, div.calendar_full .sun h3, div.calendar_full .outside h3 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #ccc;
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* hide the extra date data in the calendar day headings - only here for accessibility reasons */
+div.calendar_full h3 span {
+  display: none;
+}
+
+div.calendar_full .mon li, div.calendar_full .tue li, div.calendar_full .wed li, div.calendar_full .thu li, div.calendar_full .fri li, div.calendar_full .sat li, div.calendar_full .sun li, div.calendar_full .outside li {
+  margin: 0;
+  padding: 0;
+}
+
+div.calendar_full div.full {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.calendar_sidebar div.week {
+  width: 200px;
+}
+
+/* basic styles for all days */
+div.calendar_sidebar .mon, div.calendar_sidebar .tue, div.calendar_sidebar .wed, div.calendar_sidebar .thu, div.calendar_sidebar .fri, div.calendar_sidebar .sat, div.calendar_sidebar .sun, div.calendar_sidebar .outside {
+  float: left;
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+  margin: 1px;
+  border: 1px solid #ccc;
+  overflow: none;
+}
+
+/* perhaps a different style for the weekend? */
+div.calendar_sidebar .sat, div.calendar_sidebar .sun {
+  background: #f9f9f9;
+}
+
+/* 'outside' indecates a day from the previous or next month - you might like to change styles for these days */
+div.calendar_sidebar .outside {
+  background: #f0f0f0;
+}
+
+div.calendar_sidebar a.summary {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+div.calendar_sidebar a.summary h3 {
+  color: #000;
+}
+
+div.calendar_sidebar .mon:hover, div.calendar_sidebar .tue:hover, div.calendar_sidebar .wed:hover, div.calendar_sidebar .thu:hover, div.calendar_sidebar .fri:hover, div.calendar_sidebar .sat:hover, div.calendar_sidebar .sun:hover, div.calendar_sidebar .outside:hover {
+  background: #f5f5f5;
+}
+
+div.calendar_sidebar .mon h3, div.calendar_sidebar .tue h3, div.calendar_sidebar .wed h3, div.calendar_sidebar .thu h3, div.calendar_sidebar .fri h3, div.calendar_sidebar .sat h3, div.calendar_sidebar .sun h3, div.calendar_sidebar .outside h3 {
+  font-weight: bold;
+  font-size: 1em;
+  color: #ccc;
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* hide the extra date data in the calendar day headings - only here for accessibility reasons */
+div.calendar_sidebar h3 span {
+  display: none;
+}
+
+div.calendar_sidebar .mon li, div.calendar_sidebar .tue li, div.calendar_sidebar .wed li, div.calendar_sidebar .thu li, div.calendar_sidebar .fri li, div.calendar_sidebar .sat li, div.calendar_sidebar .sun li, div.calendar_sidebar .outside li {
+  margin: 0;
+  padding: 0;
+}
+
+div.calendar_sidebar div.full {
+  display: none;
+}
+
+
+
+
+/* jquery tooltip */
+#tooltip {
+  position: absolute;
+  z-index: 3000;
+  border: 1px solid #111;
+  background-color: #eee;
+  padding: 5px;
+  opacity: 0.85;
+}
+
+#tooltip h3, #tooltip div {
+  margin: 0;
+}
