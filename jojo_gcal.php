@@ -196,12 +196,13 @@ class Jojo_Plugin_Jojo_gcal extends Jojo_Plugin
         
         $t = $actualstart;
         while ($t < $actualend) {
+            $tPlusDay = strtotime('+1 day', $t);
             $e = array();
             foreach ($events as $event) {
-                if (($event['start'] > $t) && ($event['start'] < ($t + (60 * 60 * 24)))) {$e[] = $event;}
+                if (($event['start'] > $t) && ($event['start'] < $tPlusDay)) {$e[] = $event;}
             }
             $days[] = array('timestamp' => $t, 'day' => date('j', $t), 'weekday' => strtolower(date('D', $t)), 'month' => date('F', $t), 'events' => $e);
-            $t = $t + (60 * 60 * 24);
+            $t = $tPlusDay;
         }
 
         $smarty->assign('startofweek', $startofweek);
