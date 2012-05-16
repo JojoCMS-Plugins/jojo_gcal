@@ -431,7 +431,7 @@ class Jojo_Plugin_Jojo_gcal_base extends Jojo_Plugin
        
         // Prep
         // change the months into two digits
-        $months = array('January'=>1, 'February'=>2, 'March'=>3, 'April'=>4, 'May'=>5, 'June'=>6, 'July'=>7, 'August'=>8, 'September'=>9, 'October'=>10, 'November'=>11, 'December'=>12);
+        $months = array('January'=>01, 'February'=>02, 'March'=>03, 'April'=>04, 'May'=>05, 'June'=>06, 'July'=>07, 'August'=>08, 'September'=>09, 'October'=>10, 'November'=>11, 'December'=>12);
         // change the hours into 24 hours
         $hours = array('8'=>'08', '9'=>'09', '10'=>'10', '11'=>'11', '12'=>'12', '1'=>'13', '2'=>'14', '3'=>'15', '4'=>'16', '5'=>'17');
         
@@ -699,13 +699,12 @@ class Jojo_Plugin_Jojo_gcal_base extends Jojo_Plugin
         // Pull submissions out of database
         // (have to pull all of them as can't sort them on the way out as data is in a serialized array in one field)
         $submissions = Jojo::selectQuery("SELECT * FROM {formsubmission} WHERE form_id = ? ", array(Jojo::getOption('calendar_booking_form_id')));
-            //echo "results = <pre>";print_r($submissions);echo "</pre>";die();exit();
-        
+            
         // change the hours into 24 hours
         $hours = array('8'=>'08', '9'=>'09', '10'=>'10', '11'=>'11', '12'=>'12', '1'=>'13', '2'=>'14', '3'=>'15', '4'=>'16', '5'=>'17');
         
         // change the months into two digits
-        $months = array('January'=>1, 'February'=>2, 'March'=>3, 'April'=>4, 'May'=>5, 'June'=>6, 'July'=>7, 'August'=>8, 'September'=>9, 'October'=>10, 'November'=>11, 'December'=>12);
+        $months = array('January'=>01, 'February'=>02, 'March'=>03, 'April'=>04, 'May'=>05, 'June'=>06, 'July'=>07, 'August'=>08, 'September'=>09, 'October'=>10, 'November'=>11, 'December'=>12);
             
         // Loop through then and if any are in the next hour send an email
         foreach($submissions as $key=>$value){
@@ -713,7 +712,7 @@ class Jojo_Plugin_Jojo_gcal_base extends Jojo_Plugin
             
             //change time to timestamp for event check if it between 1 and 1.5 hours from now
             $eventStart = mktime($hours[$fields[10]['value']],$fields[11]['value'],0,$months[$fields[8]['value']], $fields[7]['value'], $fields[9]['value']);
-            if($eventStart > time()+3600 && $eventStart < time()+5400){
+            if($eventStart > time()+3600 && $eventStart < time()+5400 && $fields[15]['value'] == 'complete'){
                 
                 $from_name = Jojo::either(_CONTACTNAME, _FROMNAME, _WEBNAME);
                 $from_email = Jojo::either(_CONTACTADDRESS, _FROMADDRESS, _WEBMASTERADDRESS);
